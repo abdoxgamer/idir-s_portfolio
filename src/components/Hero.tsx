@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="mb-8 relative">
           <div className="relative inline-block">
             <img
-              src="/WhatsApp Image 2025-06-12 à 10.43.13_c7dd170f.jpg"
+              src="/profile-photo.jpg"
               alt="Abdelwahed Idir"
               className="w-48 h-48 md:w-56 md:h-56 rounded-full mx-auto object-cover shadow-2xl border-4 border-white hover:shadow-3xl hover:scale-105 transition-all duration-500"
               style={{
