@@ -41,28 +41,44 @@ const Contact = () => {
       label: "Phone",
       value: "+212 621 24 85 03",
       href: "tel:+212621248503",
-      color: "text-green-600"
+      color: "text-green-600",
+      hoverBg: "group-hover:bg-green-50",
+      iconBg: "bg-green-100 group-hover:bg-green-500",
+      iconColor: "text-green-600 group-hover:text-white",
+      textColor: "group-hover:text-green-600"
     },
     {
       icon: Mail,
       label: "Email",
       value: "abdelwahedidr@gmail.com",
       href: "mailto:abdelwahedidr@gmail.com",
-      color: "text-blue-600"
+      color: "text-blue-600",
+      hoverBg: "group-hover:bg-blue-50",
+      iconBg: "bg-blue-100 group-hover:bg-blue-500",
+      iconColor: "text-blue-600 group-hover:text-white",
+      textColor: "group-hover:text-blue-600"
     },
     {
       icon: Instagram,
       label: "Instagram",
       value: "@abdo_idrr",
-      href: "https://instagram.com/abdo_idrr",
-      color: "text-pink-600"
+      href: "https://www.instagram.com/abdo_idrr/",
+      color: "text-pink-600",
+      hoverBg: "group-hover:bg-gradient-to-br group-hover:from-purple-50 group-hover:to-pink-50",
+      iconBg: "bg-gradient-to-br from-purple-100 to-pink-100 group-hover:from-purple-500 group-hover:to-pink-500",
+      iconColor: "text-pink-600 group-hover:text-white",
+      textColor: "group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600 group-hover:bg-clip-text"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
       value: "abdelwahed-idir",
       href: "https://linkedin.com/in/abdelwahed-idir",
-      color: "text-blue-700"
+      color: "text-blue-700",
+      hoverBg: "group-hover:bg-blue-50",
+      iconBg: "bg-blue-100 group-hover:bg-blue-700",
+      iconColor: "text-blue-700 group-hover:text-white",
+      textColor: "group-hover:text-blue-700"
     }
   ];
 
@@ -157,14 +173,18 @@ const Contact = () => {
                     href={contact.href}
                     target={contact.href.startsWith('http') ? '_blank' : undefined}
                     rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="flex items-center p-4 rounded-lg hover:bg-gray-50 transition-all duration-300 group transform hover:-translate-y-1 hover:shadow-md"
+                    className={`flex items-center p-4 rounded-lg transition-all duration-500 group transform hover:-translate-y-1 hover:shadow-lg border border-transparent hover:border-gray-100 ${contact.hoverBg}`}
                   >
-                    <div className={`p-3 rounded-lg bg-gray-100 group-hover:bg-white transition-all duration-300 mr-4 group-hover:scale-110`}>
-                      <contact.icon className={`${contact.color} group-hover:scale-110 transition-transform duration-300`} size={24} />
+                    <div className={`p-3 rounded-lg transition-all duration-500 mr-4 group-hover:scale-110 group-hover:shadow-lg ${contact.iconBg}`}>
+                      <contact.icon className={`transition-all duration-500 group-hover:scale-110 ${contact.iconColor}`} size={24} />
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">{contact.label}</div>
-                      <div className="text-gray-600">{contact.value}</div>
+                      <div className={`font-semibold text-gray-900 transition-all duration-500 ${contact.textColor}`}>
+                        {contact.label}
+                      </div>
+                      <div className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+                        {contact.value}
+                      </div>
                     </div>
                   </a>
                 ))}
