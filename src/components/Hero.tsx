@@ -13,20 +13,39 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-green-50 pt-20">
       <div className="max-w-6xl mx-auto px-4 text-center">
         <div className="mb-8 relative">
-          <div className="relative inline-block">
-            <img
-              src="/profile-photo.jpg"
-              alt="Abdelwahed Idir"
-              className="w-48 h-48 md:w-56 md:h-56 rounded-full mx-auto object-cover shadow-2xl border-4 border-white hover:shadow-3xl hover:scale-105 transition-all duration-500"
-              style={{
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                backgroundClip: 'padding-box'
-              }}
-            />
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full opacity-20 animate-pulse hover:opacity-40 transition-opacity duration-300"></div>
-            <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-green-500 rounded-full opacity-30 animate-pulse delay-1000 hover:opacity-50 transition-opacity duration-300"></div>
-            <div className="absolute top-1/2 -right-8 w-4 h-4 bg-purple-500 rounded-full opacity-25 animate-bounce delay-500 hover:opacity-45 transition-opacity duration-300"></div>
+          <div className="relative inline-block group">
+            {/* Animated background rings */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 via-purple-500 to-green-400 opacity-75 blur-lg animate-pulse group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-blue-500 via-purple-600 to-green-500 opacity-20 animate-spin-slow group-hover:opacity-40 transition-opacity duration-500"></div>
+            <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-30 animate-pulse delay-1000 group-hover:opacity-50 transition-opacity duration-500"></div>
+            
+            {/* Main photo container */}
+            <div className="relative bg-white p-2 rounded-full shadow-2xl group-hover:shadow-3xl transition-all duration-500">
+              <img
+                src="/profile-photo.jpg"
+                alt="Abdelwahed Idir"
+                className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover shadow-inner border-4 border-white group-hover:border-blue-100 transition-all duration-500 transform group-hover:scale-105"
+                style={{
+                  filter: 'contrast(1.1) brightness(1.05) saturate(1.1)',
+                }}
+              />
+              
+              {/* Professional overlay gradient */}
+              <div className="absolute inset-2 rounded-full bg-gradient-to-t from-black/10 via-transparent to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+            
+            {/* Floating decorative elements */}
+            <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full opacity-80 animate-float shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-500 flex items-center justify-center">
+              <div className="w-6 h-6 bg-white rounded-full opacity-90"></div>
+            </div>
+            <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full opacity-70 animate-float-delayed shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-500"></div>
+            <div className="absolute top-1/2 -right-10 w-6 h-6 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full opacity-60 animate-bounce-slow shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-500"></div>
+            <div className="absolute top-1/4 -left-8 w-4 h-4 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full opacity-50 animate-pulse shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-500"></div>
+            
+            {/* Professional badge */}
+            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-600 to-green-600 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+              Professional
+            </div>
           </div>
         </div>
         

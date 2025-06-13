@@ -35,6 +35,43 @@
   100% { transform: rotate(360deg); }
 }
 
+/* Professional photo animations */
+@keyframes animate-spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes animate-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+@keyframes animate-float-delayed {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(-3deg); }
+}
+
+@keyframes animate-bounce-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-spin-slow {
+  animation: animate-spin-slow 8s linear infinite;
+}
+
+.animate-float {
+  animation: animate-float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: animate-float-delayed 3s ease-in-out infinite 1s;
+}
+
+.animate-bounce-slow {
+  animation: animate-bounce-slow 2s ease-in-out infinite;
+}
+
 /* Smooth background blend */
 .photo-container {
   background: radial-gradient(circle at center, rgba(255,255,255,0.9) 0%, transparent 70%);
@@ -128,4 +165,23 @@
   ring-opacity: 0.5;
   border-color: #3b82f6;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Professional photo enhancements */
+.shadow-3xl {
+  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.shadow-inner {
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Advanced gradient effects */
+.bg-gradient-professional {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
