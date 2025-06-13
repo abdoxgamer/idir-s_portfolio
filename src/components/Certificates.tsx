@@ -10,7 +10,7 @@ const Certificates = () => {
       id: "UC-5e1f2b27-39e8-d0d8-99e2-e1ea1491a4d0",
       category: "Database",
       color: "bg-blue-500",
-      url: "https://www.udemy.com/certificate/UC-5e1f2b27-39e8-d0d8-99e2-e1ea1491a4d0/"
+      url: "https://www.udemy.com/certificate/UC-5e1f2b27-39e8-40d8-99e2-efea1491a4d0/"
     },
     {
       title: "Ultimate Ethical Hacking and Penetration Testing (UEH)",
@@ -55,7 +55,7 @@ const Certificates = () => {
       id: "3ZFDFWJZ",
       category: "Web Development",
       color: "bg-orange-500",
-      url: "https://www.educba.com/certificate/?c=3ZFDFWJZ"
+      url: "https://www.educba.com/certificate/?c=3ZFDFWJZ-"
     },
     {
       title: "React & Redux Certificate",
