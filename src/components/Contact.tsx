@@ -83,7 +83,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-gradient-to-br from-slate-100 via-gray-50 to-blue-50 relative">
+      {/* Background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-10 left-10 w-24 h-24 bg-gradient-to-br from-blue-400/15 to-purple-600/15 rounded-full blur-xl animate-float"></div>
+        <div className="absolute bottom-10 right-10 w-32 h-32 bg-gradient-to-br from-green-400/15 to-blue-600/15 rounded-full blur-xl animate-float-delayed"></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-br from-purple-400/10 to-pink-600/10 rounded-full blur-lg animate-bounce-slow"></div>
+      </div>
+      
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>

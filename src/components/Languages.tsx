@@ -34,7 +34,19 @@ const Languages = () => {
   ];
 
   return (
-    <section id="languages" className="py-20 bg-white">
+    <section id="languages" className="py-20 bg-gradient-to-br from-white via-slate-50 to-gray-100 relative">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-3">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `linear-gradient(45deg, #f1f5f9 25%, transparent 25%),
+                           linear-gradient(-45deg, #f1f5f9 25%, transparent 25%),
+                           linear-gradient(45deg, transparent 75%, #f1f5f9 75%),
+                           linear-gradient(-45deg, transparent 75%, #f1f5f9 75%)`,
+          backgroundSize: '20px 20px',
+          backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px'
+        }}></div>
+      </div>
+      
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Languages</h2>
