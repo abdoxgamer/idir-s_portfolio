@@ -31,24 +31,6 @@ const Certificates = () => {
       url: "https://www.udemy.com/certificate/UC-bb2336e4-f5a1-4d3c-bdf2-2e0ad9d345b6/"
     },
     {
-      title: "Bootstrap 5 Certificate",
-      provider: "Shiyar Academy",
-      date: "Oct 2020",
-      id: "CSC-20201011-0830",
-      category: "Frontend",
-      color: "bg-indigo-500",
-      url: "https://academy.codershiyar.com/certification.php?certificate_number=CSC-20201011-0830"
-    },
-    {
-      title: "Master CSS Certificate",
-      provider: "Shiyar Academy",
-      date: "Oct 2020",
-      id: "CSC-20201009-1831",
-      category: "Frontend",
-      color: "bg-green-500",
-      url: "https://academy.codershiyar.com/certification.php?certificate_number=CSC-20201009-1831"
-    },
-    {
       title: "Build Responsive Website using HTML5, CSS3, JS, Bootstrap",
       provider: "EDUCBA",
       date: "Oct 2020",
@@ -67,18 +49,24 @@ const Certificates = () => {
       url: "https://www.sololearn.com/certificates/CT-VBJRNUDF"
     },
     {
-      title: "Master HTML Certificate",
-      provider: "Shiyar Academy",
-      date: "Sep 2020",
-      id: "CSC-20200925-2119",
-      category: "Frontend",
-      color: "bg-teal-500",
-      url: "https://academy.codershiyar.com/certification.php?certificate_number=CSC-20200925-2119"
+      title: "Fundamentals of Building AI Agents",
+      provider: "IBM",
+      date: "2024",
+      id: "YPA8QP16O9GG",
+      category: "AI/ML",
+      color: "bg-gradient-to-r from-blue-600 to-purple-600",
+      url: "https://coursera.org/verify/YPA8QP16O9GG"
     }
   ];
 
   return (
-    <section id="certificates" className="py-20 bg-gray-50">
+    <section id="certificates" className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 relative">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-blue-400/10 to-purple-600/10 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 left-20 w-40 h-40 bg-gradient-to-br from-green-400/10 to-blue-600/10 rounded-full blur-2xl"></div>
+      </div>
+      
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Certificates & Achievements</h2>

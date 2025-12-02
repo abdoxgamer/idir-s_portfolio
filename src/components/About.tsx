@@ -3,7 +3,16 @@ import { MapPin, GraduationCap, Fish, Shield, Code } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-gradient-to-br from-white via-gray-50 to-blue-50 relative">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 25% 25%, #3b82f6 2px, transparent 2px),
+                           radial-gradient(circle at 75% 75%, #10b981 2px, transparent 2px)`,
+          backgroundSize: '60px 60px'
+        }}></div>
+      </div>
+      
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
